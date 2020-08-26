@@ -29,5 +29,6 @@ deploy:
   bucket: ${AWS_S3_BUCKET}
   region: ap-south-1
   local_dir: dist
+  acl: public_read
   on:
     branch: master
