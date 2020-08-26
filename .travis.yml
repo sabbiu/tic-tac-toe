@@ -1,0 +1,33 @@
+sudo: required
+dist: trusty
+
+language: node_js
+
+node_js:
+  - 'node'
+
+cache:
+  directories:
+    - node_modules
+
+before_script:
+  - 'npm i'
+
+script:
+  - 'npm test'
+
+before_deploy:
+  - 'npm run build'
+  - 'npm run test:coverage'
+  - 'mv coverage/lcov-report dist/coverage'
+
+deploy:
+  skip_cleanup: true
+  provider: s3
+  access_key_id: ${AWS_ACCESS_KEY_ID}
+  secret_access_key: ${AWS_SECRET_KEY}
+  bucket: ${AWS_S3_BUCKET}
+  region: ap-south-1
+  local_dir: dist
+  on:
+    branch: master
