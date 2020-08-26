@@ -30,7 +30,7 @@ import { PLAYERX, PLAYERO } from './constants';
  * - winner: 'X' or 'O' or 'Draw'
  * - playData
  */
-export default function updatePlay({
+export function updatePlay({
   playData,
   player,
   count,

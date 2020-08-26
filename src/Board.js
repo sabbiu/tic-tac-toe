@@ -1,14 +1,14 @@
 import React, { useReducer, useEffect } from 'react';
 import Square from './Square';
-import getInitialBoard from './utils/getInitialBoard';
+import { getInitialBoard } from './utils/getInitialBoard';
 import {
   PLAYERX,
   PLAYERO,
   BOARD_SIZES,
   INITIAL_BOARD_SIZE,
 } from './utils/constants';
-import togglePlayer from './utils/togglePlayer';
-import updatePlay from './utils/updatePlay';
+import { togglePlayer } from './utils/togglePlayer';
+import { updatePlay } from './utils/updatePlay';
 
 const rowStyle = {
   display: 'flex',
@@ -48,7 +48,7 @@ const buttonStyle = {
   cursor: 'pointer',
 };
 
-const types = {
+export const types = {
   initialize: 'initialize',
   update_board: 'update_board',
   update_current_player: 'update_current_player',
@@ -66,7 +66,7 @@ const initialState = {
   winner: '',
 };
 
-function reducer(state, action) {
+export function reducer(state, action) {
   switch (action.type) {
     case types.update_board:
       return {

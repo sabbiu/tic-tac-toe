@@ -1,3 +1,5 @@
 dist
 node_modules
 instruction.txt
+coverage
+__snapshots__
