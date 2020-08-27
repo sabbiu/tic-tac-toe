@@ -1,5 +1,7 @@
 # Tic Tac Toe Game (React)
 
+[![Travis Build](https://travis-ci.org/sabbiu/tic-tac-toe.svg?branch=master)](https://travis-ci.org/github/sabbiu/tic-tac-toe)
+
 clone this repo and cd into it. Execute the following commands from the root directory of this project.
 
 Demo can be found at: [tictactoe](http://tictactoe.sabbiu.me.s3-website.ap-south-1.amazonaws.com/index.html)
