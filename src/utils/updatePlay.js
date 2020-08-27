@@ -88,7 +88,7 @@ export function updatePlay({
     })
   );
 
-  if (newCount === boardSize * boardSize) {
+  if (newCount === boardSize * boardSize && !winner) {
     winner = 'Draw';
   }
 
